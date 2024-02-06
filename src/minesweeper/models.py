@@ -1,3 +1,9 @@
 from django.db import models
 
-# Create your models here.
+
+class Game(models.Model):
+    width = models.IntegerField()
+    height = models.IntegerField()
+    mines_count = models.IntegerField()
+    field = models.JSONField(default=list)
+    completed = models.BooleanField(default=False)
